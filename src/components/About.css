@@ -1,0 +1,218 @@
+.about-section {
+    position: relative;
+    overflow: hidden;
+}
+
+.about-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: -10%;
+    width: 40%;
+    height: 100%;
+    background: linear-gradient(135deg, rgba(37, 99, 235, 0.03) 0%, rgba(14, 42, 71, 0.05) 100%);
+    border-radius: 50%;
+    filter: blur(60px);
+    pointer-events: none;
+}
+
+.about-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    align-items: center;
+}
+
+.about-content {
+    opacity: 0;
+    transform: translateX(-30px);
+    transition: all 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.about-visible .about-content {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.about-title {
+    font-size: clamp(2rem, 4vw, 2.75rem);
+    font-weight: 700;
+    color: var(--primary-blue);
+    margin-bottom: 2rem;
+    line-height: 1.2;
+    position: relative;
+    padding-bottom: 1rem;
+}
+
+.about-title::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 80px;
+    height: 4px;
+    background: linear-gradient(90deg, var(--accent-blue) 0%, var(--accent-blue-light) 100%);
+    border-radius: 2px;
+}
+
+.about-text {
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+}
+
+.about-text p {
+    font-size: 1.0625rem;
+    line-height: 1.8;
+    color: var(--grey-600);
+    margin: 0;
+}
+
+.about-highlights {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    opacity: 0;
+    transform: translateX(30px);
+    transition: all 0.8s cubic-bezier(0.16, 1, 0.3, 1) 0.2s;
+}
+
+.about-visible .about-highlights {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.highlight-card {
+    background: var(--white);
+    border: 2px solid var(--grey-100);
+    border-radius: var(--radius-xl);
+    padding: 2rem;
+    display: flex;
+    align-items: flex-start;
+    gap: 1.5rem;
+    transition: all var(--transition-base);
+    opacity: 0;
+    transform: translateY(20px);
+    box-shadow: var(--shadow-sm);
+}
+
+.about-visible .highlight-card {
+    animation: fadeInUp 0.6s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+@keyframes fadeInUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.highlight-card:hover {
+    border-color: var(--accent-blue);
+    box-shadow: var(--shadow-xl);
+    transform: translateY(-4px);
+}
+
+.highlight-icon {
+    font-size: 3rem;
+    flex-shrink: 0;
+    width: 70px;
+    height: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, rgba(37, 99, 235, 0.1) 0%, rgba(59, 130, 246, 0.15) 100%);
+    border-radius: var(--radius-lg);
+    transition: all var(--transition-base);
+}
+
+.highlight-card:hover .highlight-icon {
+    transform: scale(1.1) rotate(5deg);
+    background: linear-gradient(135deg, rgba(37, 99, 235, 0.2) 0%, rgba(59, 130, 246, 0.25) 100%);
+}
+
+.highlight-content {
+    flex: 1;
+}
+
+.highlight-title {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: var(--primary-blue);
+    margin-bottom: 0.5rem;
+    line-height: 1.3;
+}
+
+.highlight-description {
+    font-size: 1rem;
+    color: var(--grey-600);
+    line-height: 1.6;
+    margin: 0;
+}
+
+/* Responsive */
+@media (max-width: 968px) {
+    .about-grid {
+        grid-template-columns: 1fr;
+        gap: 3rem;
+    }
+
+    .about-content,
+    .about-highlights {
+        transform: translateX(0);
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    .about-visible .about-content,
+    .about-visible .about-highlights {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@media (max-width: 768px) {
+    .about-grid {
+        gap: 2.5rem;
+    }
+
+    .about-title {
+        font-size: 2rem;
+        margin-bottom: 1.5rem;
+    }
+
+    .about-text p {
+        font-size: 1rem;
+    }
+
+    .highlight-card {
+        padding: 1.5rem;
+        gap: 1.25rem;
+    }
+
+    .highlight-icon {
+        font-size: 2.5rem;
+        width: 60px;
+        height: 60px;
+    }
+
+    .highlight-title {
+        font-size: 1.125rem;
+    }
+
+    .highlight-description {
+        font-size: 0.9375rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .highlight-card {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .highlight-icon {
+        margin-bottom: 0.5rem;
+    }
+}

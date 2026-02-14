@@ -1,0 +1,149 @@
+.applications-section {
+    background: linear-gradient(180deg, var(--white) 0%, var(--grey-50) 100%);
+}
+
+.applications-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 1.5rem;
+}
+
+.application-card {
+    background: var(--white);
+    border: 2px solid var(--grey-100);
+    border-radius: var(--radius-xl);
+    padding: 2.5rem 2rem;
+    text-align: center;
+    transition: all var(--transition-slow);
+    position: relative;
+    overflow: hidden;
+    opacity: 0;
+    transform: translateY(30px);
+    cursor: pointer;
+}
+
+.applications-visible .application-card {
+    animation: slideUpFade 0.6s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+@keyframes slideUpFade {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.application-card:hover {
+    border-color: var(--accent-blue);
+    transform: translateY(-10px) scale(1.03);
+    box-shadow: var(--shadow-2xl);
+}
+
+.application-shine {
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: linear-gradient(45deg,
+            transparent 30%,
+            rgba(255, 255, 255, 0.3) 50%,
+            transparent 70%);
+    transform: translateX(-100%) translateY(-100%) rotate(45deg);
+    transition: transform 0.6s;
+}
+
+.application-card:hover .application-shine {
+    transform: translateX(100%) translateY(100%) rotate(45deg);
+}
+
+.application-icon-bg {
+    width: 100px;
+    height: 100px;
+    margin: 0 auto 1.5rem;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all var(--transition-base);
+    position: relative;
+}
+
+.application-card:hover .application-icon-bg {
+    transform: scale(1.15) rotate(10deg);
+}
+
+.application-icon {
+    font-size: 3.5rem;
+    transition: all var(--transition-base);
+    filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.1));
+}
+
+.application-card:hover .application-icon {
+    transform: scale(1.1);
+}
+
+.application-title {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: var(--primary-blue);
+    margin: 0;
+    line-height: 1.4;
+    position: relative;
+    z-index: 1;
+}
+
+/* Responsive */
+@media (max-width: 968px) {
+    .applications-grid {
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        gap: 1.25rem;
+    }
+
+    .application-card {
+        padding: 2rem 1.5rem;
+    }
+
+    .application-icon-bg {
+        width: 80px;
+        height: 80px;
+        margin-bottom: 1.25rem;
+    }
+
+    .application-icon {
+        font-size: 3rem;
+    }
+
+    .application-title {
+        font-size: 1.125rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .applications-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 480px) {
+    .applications-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .application-card {
+        padding: 1.75rem 1.5rem;
+    }
+
+    .application-icon-bg {
+        width: 70px;
+        height: 70px;
+    }
+
+    .application-icon {
+        font-size: 2.5rem;
+    }
+
+    .application-title {
+        font-size: 1.0625rem;
+    }
+}
