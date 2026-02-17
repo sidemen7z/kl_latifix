@@ -50,7 +50,7 @@ const Hero = () => {
                     <div className="hero-content-right">
                         <div className="hero-image-wrapper">
                             <img
-                                src="/logo.png"
+                                src="/products/ChatGPT Image Feb 17, 2026, 03_03_44 PM.png"
                                 alt="K L LATIFIX - Premium Construction Solutions"
                                 className="hero-brand-image"
                             />

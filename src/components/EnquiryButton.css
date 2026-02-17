@@ -1,7 +1,7 @@
 /* Floating WhatsApp Button - Bottom Right */
 .floating-whatsapp-btn {
     position: fixed;
-    bottom: 110px;
+    bottom: 30px;
     right: 30px;
     width: 60px;
     height: 60px;
@@ -16,6 +16,11 @@
     align-items: center;
     justify-content: center;
     color: white;
+}
+
+/* Move up when scroll-to-top button appears */
+.floating-whatsapp-btn.whatsapp-moved-up {
+    bottom: 110px;
 }
 
 .floating-whatsapp-btn svg {
@@ -38,8 +43,12 @@
     .floating-whatsapp-btn {
         width: 56px;
         height: 56px;
-        bottom: 100px;
+        bottom: 24px;
         right: 24px;
+    }
+
+    .floating-whatsapp-btn.whatsapp-moved-up {
+        bottom: 100px;
     }
 
     .floating-whatsapp-btn svg {
@@ -52,8 +61,12 @@
     .floating-whatsapp-btn {
         width: 52px;
         height: 52px;
-        bottom: 90px;
+        bottom: 20px;
         right: 20px;
+    }
+
+    .floating-whatsapp-btn.whatsapp-moved-up {
+        bottom: 90px;
     }
 
     .floating-whatsapp-btn svg {

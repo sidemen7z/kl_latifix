@@ -1,6 +1,18 @@
+import { useState, useEffect } from 'react'
 import './EnquiryButton.css'
 
 const EnquiryButton = () => {
+    const [isScrolled, setIsScrolled] = useState(false)
+
+    useEffect(() => {
+        const handleScroll = () => {
+            setIsScrolled(window.scrollY > 300)
+        }
+
+        window.addEventListener('scroll', handleScroll)
+        return () => window.removeEventListener('scroll', handleScroll)
+    }, [])
+
     const handleWhatsAppClick = () => {
         const whatsappMessage = `Hello! I would like to know more about your products.`
         const whatsappNumber = '917350996738'
@@ -10,7 +22,7 @@ const EnquiryButton = () => {
 
     return (
         <button 
-            className="floating-whatsapp-btn"
+            className={`floating-whatsapp-btn ${isScrolled ? 'whatsapp-moved-up' : ''}`}
             onClick={handleWhatsAppClick}
             aria-label="Chat on WhatsApp"
         >
