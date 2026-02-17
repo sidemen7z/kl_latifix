@@ -14,10 +14,10 @@ const VisionMission = () => {
                             </svg>
                         </div>
                         <h3 className="vm-title">Our Vision</h3>
-                        <p className="vm-description">
-                            To be the most trusted and preferred brand in construction chemical solutions across India, 
-                            setting industry standards through innovation, quality, and customer satisfaction.
-                        </p>
+                        <ul className="vm-list">
+                            <li>To be a pioneer in providing innovative and high-quality tile adhesive and construction solutions, focusing on long-lasting performance while caring for the environment and the health of users.</li>
+                            <li>To promote increasingly sustainable building solutions in the name of innovation, delivering products that are mindful of both people and the planet.</li>
+                        </ul>
                     </div>
 
                     {/* Mission */}
@@ -30,11 +30,14 @@ const VisionMission = () => {
                             </svg>
                         </div>
                         <h3 className="vm-title">Our Mission</h3>
-                        <p className="vm-description">
-                            To deliver premium quality construction chemical solutions engineered with European technology, 
-                            ensuring superior performance, durability, and value for our customers while maintaining the highest 
-                            standards of safety and environmental responsibility.
-                        </p>
+                        <ul className="vm-list">
+                            <li>To provide customers with cutting-edge tile and stone fixing solutions.</li>
+                            <li>To combine global expertise with advanced technology in tiles, stone fixing, joint fillers, waterproofing chemicals, sealers, sealants, and construction solutions.</li>
+                            <li>To deliver highly responsive and quick service while reducing carbon footprint.</li>
+                            <li>To offer on-site training to contractors and applicators using advanced construction techniques.</li>
+                            <li>To build close, long-lasting win-win relationships with customers.</li>
+                            <li>To improve working conditions and help develop knowledge and skills within the construction industry.</li>
+                        </ul>
                     </div>
                 </div>
             </div>

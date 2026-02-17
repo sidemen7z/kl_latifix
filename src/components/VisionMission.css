@@ -41,6 +41,32 @@
     margin: 0;
 }
 
+.vm-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.vm-list li {
+    font-size: 1rem;
+    line-height: 1.7;
+    color: #64748b;
+    padding-left: 32px;
+    position: relative;
+}
+
+.vm-list li::before {
+    content: '✓';
+    position: absolute;
+    left: 0;
+    color: #2563eb;
+    font-weight: 700;
+    font-size: 1.25rem;
+}
+
 .vm-description {
     font-size: 1.125rem;
     line-height: 1.8;
@@ -64,6 +90,15 @@
 
     .vm-title {
         font-size: 1.75rem;
+    }
+
+    .vm-list li {
+        font-size: 0.9375rem;
+        padding-left: 28px;
+    }
+
+    .vm-list li::before {
+        font-size: 1.125rem;
     }
 
     .vm-description {
@@ -99,6 +134,16 @@
         font-size: 1.5rem;
     }
 
+    .vm-list li {
+        font-size: 0.875rem;
+        line-height: 1.6;
+        padding-left: 26px;
+    }
+
+    .vm-list li::before {
+        font-size: 1rem;
+    }
+
     .vm-description {
         font-size: 0.9375rem;
         line-height: 1.7;
@@ -127,6 +172,15 @@
 
     .vm-title {
         font-size: 1.375rem;
+    }
+
+    .vm-list li {
+        font-size: 0.8125rem;
+        padding-left: 24px;
+    }
+
+    .vm-list li::before {
+        font-size: 0.9375rem;
     }
 
     .vm-description {
