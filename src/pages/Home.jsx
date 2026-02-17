@@ -5,6 +5,7 @@ import Products from '../components/Products'
 import VideoShowcase from '../components/VideoShowcase'
 import WhyChooseUs from '../components/WhyChooseUs'
 import ApplicationAreas from '../components/ApplicationAreas'
+import CallToAction from '../components/CallToAction'
 
 const Home = () => {
     return (
@@ -16,6 +17,7 @@ const Home = () => {
             <VideoShowcase />
             <WhyChooseUs />
             <ApplicationAreas />
+            <CallToAction />
         </main>
     )
 }
