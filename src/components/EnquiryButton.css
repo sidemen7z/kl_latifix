@@ -1,7 +1,7 @@
 /* Floating WhatsApp Button - Bottom Right */
 .floating-whatsapp-btn {
     position: fixed;
-    bottom: 30px;
+    bottom: 110px;
     right: 30px;
     width: 60px;
     height: 60px;
@@ -38,7 +38,7 @@
     .floating-whatsapp-btn {
         width: 56px;
         height: 56px;
-        bottom: 24px;
+        bottom: 100px;
         right: 24px;
     }
 
@@ -52,7 +52,7 @@
     .floating-whatsapp-btn {
         width: 52px;
         height: 52px;
-        bottom: 20px;
+        bottom: 90px;
         right: 20px;
     }
 
