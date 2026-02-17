@@ -23,20 +23,17 @@ const Navbar = () => {
         let lastScrollY = window.scrollY
 
         const handleScroll = () => {
-            if (isMobileMenuOpen) return // Don't hide navbar if menu is open
+            if (isMobileMenuOpen) return
 
             const currentScrollY = window.scrollY
 
-            // Determine visibility (Hide when scrolling down > 50px, Show when scrolling up)
             if (currentScrollY < lastScrollY || currentScrollY < 50) {
                 setIsVisible(true)
             } else if (currentScrollY > lastScrollY && currentScrollY > 50) {
                 setIsVisible(false)
             }
 
-            // Determine if sticky style should apply
             setIsScrolled(currentScrollY > 50)
-
             lastScrollY = currentScrollY
         }
 
@@ -53,38 +50,68 @@ const Navbar = () => {
     }
 
     return (
-        <nav className={`navbar ${isScrolled ? 'navbar-scrolled' : ''} ${!isVisible ? 'navbar-hidden' : ''}`}>
-            <div className="container navbar-container">
-                <Link to="/" className="navbar-logo">
-                    <div className="logo-content">
-                        <img src="/logo.png" alt="K L LATIFIX" className="logo-image" />
-                        <div className="logo-text">
-                            <h2 className="logo-title">K L LATIFIX</h2>
-                            <p className="logo-tagline">With European Technology</p>
+        <>
+            <div 
+                className={`mobile-menu-overlay ${isMobileMenuOpen ? 'active' : ''}`}
+                onClick={() => setIsMobileMenuOpen(false)}
+            />
+
+            <nav className={`navbar ${isScrolled ? 'navbar-scrolled' : ''} ${!isVisible ? 'navbar-hidden' : ''}`}>
+                <div className="container navbar-container">
+                    <Link to="/" className="navbar-logo">
+                        <div className="logo-content">
+                            <img src="/logo.png" alt="K L LATIFIX" className="logo-image" />
+                            <div className="logo-text">
+                                <h2 className="logo-title">K L LATIFIX</h2>
+                                <p className="logo-tagline">With European Technology</p>
+                            </div>
                         </div>
-                    </div>
-                </Link>
+                    </Link>
 
-                <button
-                    className={`mobile-menu-toggle ${isMobileMenuOpen ? 'open' : ''}`}
-                    onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-                    aria-label="Toggle menu"
-                >
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </button>
+                    <button
+                        className={`mobile-menu-toggle ${isMobileMenuOpen ? 'open' : ''}`}
+                        onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+                        aria-label={isMobileMenuOpen ? 'Close menu' : 'Open menu'}
+                    >
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </button>
 
-                <ul className={`navbar-menu ${isMobileMenuOpen ? 'mobile-menu-open' : ''}`}>
-                    <li><Link to="/" onClick={() => setIsMobileMenuOpen(false)}>Home</Link></li>
-                    <li><a href="#about" onClick={() => scrollToSection('about')}>About</a></li>
-                    <li><a href="#products" onClick={() => scrollToSection('products')}>Products</a></li>
-                    <li><a href="#videos" onClick={() => scrollToSection('videos')}>Videos</a></li>
-                    <li><a href="#why-choose-us" onClick={() => scrollToSection('why-choose-us')}>Why Choose Us</a></li>
-                    <li><Link to="/contact" onClick={() => setIsMobileMenuOpen(false)} className="btn btn-primary btn-nav">Contact Us</Link></li>
-                </ul>
-            </div>
-        </nav>
+                    <ul className={`navbar-menu ${isMobileMenuOpen ? 'mobile-menu-open' : ''}`}>
+                        {/* Desktop Menu Items */}
+                        <li className="desktop-menu-item"><Link to="/">Home</Link></li>
+                        <li className="desktop-menu-item"><a href="#about" onClick={() => scrollToSection('about')}>About</a></li>
+                        <li className="desktop-menu-item"><a href="#products" onClick={() => scrollToSection('products')}>Products</a></li>
+                        <li className="desktop-menu-item"><a href="#videos" onClick={() => scrollToSection('videos')}>Videos</a></li>
+                        <li className="desktop-menu-item"><a href="#why-choose-us" onClick={() => scrollToSection('why-choose-us')}>Why Choose Us</a></li>
+                        <li className="desktop-menu-item"><Link to="/contact" className="btn btn-primary btn-nav">Contact Us</Link></li>
+
+                        {/* Mobile Menu - Premium Sidebar */}
+                        <div className="mobile-menu-header">
+                            <div className="mobile-menu-logo">
+                                <h3 className="mobile-menu-logo-title">KL LATIFIX</h3>
+                                <p className="mobile-menu-logo-subtitle">European Technology</p>
+                            </div>
+                        </div>
+
+                        <div className="mobile-menu-items">
+                            <li><Link to="/" onClick={() => setIsMobileMenuOpen(false)} className="active">Home</Link></li>
+                            <li><a href="#about" onClick={() => scrollToSection('about')}>About</a></li>
+                            <li><a href="#products" onClick={() => scrollToSection('products')}>Products</a></li>
+                            <li><a href="#videos" onClick={() => scrollToSection('videos')}>Videos</a></li>
+                            <li><a href="#why-choose-us" onClick={() => scrollToSection('why-choose-us')}>Why Choose Us</a></li>
+                        </div>
+
+                        <div className="mobile-menu-footer">
+                            <Link to="/contact" onClick={() => setIsMobileMenuOpen(false)} className="btn btn-primary btn-nav mobile-contact-btn">
+                                Contact Us
+                            </Link>
+                        </div>
+                    </ul>
+                </div>
+            </nav>
+        </>
     )
 }
 

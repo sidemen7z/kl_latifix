@@ -15,13 +15,6 @@ const Hero = () => {
         }
     }
 
-    const stats = [
-        { value: '15+', label: 'Years of Excellence', color: '#2563eb' },
-        { value: '11', label: 'Premium Products', color: '#0E2A47' },
-        { value: '500+', label: 'Projects Completed', color: '#2563eb' },
-        { value: '100%', label: 'Quality Assured', color: '#0E2A47' }
-    ]
-
     return (
         <section className="hero">
             <div className="container">
@@ -51,16 +44,6 @@ const Hero = () => {
                                 <path d="M7.5 15L12.5 10L7.5 5" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
                             </svg>
                         </button>
-
-                        {/* Stats Section */}
-                        <div className="hero-stats">
-                            {stats.map((stat, index) => (
-                                <div key={index} className="stat-item" style={{ '--stat-color': stat.color }}>
-                                    <div className="stat-value">{stat.value}</div>
-                                    <div className="stat-label">{stat.label}</div>
-                                </div>
-                            ))}
-                        </div>
                     </div>
 
                     {/* Right Image */}

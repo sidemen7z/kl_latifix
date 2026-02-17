@@ -217,9 +217,24 @@
 }
 
 /* Responsive */
-@media (max-width: 1024px) {
+@media (max-width: 1200px) {
     .hero-grid {
         gap: 60px;
+    }
+
+    .hero-stats {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1.5rem;
+    }
+}
+
+@media (max-width: 1024px) {
+    .hero {
+        padding: 110px 0 70px;
+    }
+
+    .hero-grid {
+        gap: 50px;
     }
 
     .hero-stats {
@@ -229,6 +244,11 @@
 
     .stat-value {
         font-size: 2rem;
+    }
+
+    .hero-image-wrapper {
+        padding: 3rem;
+        min-height: 450px;
     }
 }
 
@@ -244,7 +264,7 @@
     }
 
     .hero-title-corporate {
-        font-size: 2.5rem;
+        font-size: 2.25rem;
     }
 
     .hero-subtitle-corporate {
@@ -252,13 +272,25 @@
         max-width: 100%;
     }
 
+    .hero-badge-corporate {
+        font-size: 0.8125rem;
+        padding: 0.625rem 1.25rem;
+    }
+
+    .btn-corporate-primary {
+        padding: 0.875rem 1.75rem;
+        font-size: 0.9375rem;
+    }
+
     .hero-stats {
         grid-template-columns: repeat(2, 1fr);
-        gap: 1.5rem;
+        gap: 1.25rem;
+        margin-top: 0.75rem;
+        padding-top: 1.5rem;
     }
 
     .stat-value {
-        font-size: 1.75rem;
+        font-size: 1.875rem;
     }
 
     .stat-label {
@@ -266,8 +298,8 @@
     }
 
     .hero-image-wrapper {
-        padding: 3rem 2rem;
-        min-height: 400px;
+        padding: 2.5rem 2rem;
+        min-height: 380px;
     }
 
     .overlay-badge {
@@ -293,31 +325,69 @@
         padding: 90px 0 40px;
     }
 
+    .hero-grid {
+        gap: 30px;
+    }
+
     .hero-title-corporate {
-        font-size: 2rem;
+        font-size: 1.875rem;
+        line-height: 1.2;
     }
 
     .hero-subtitle-corporate {
         font-size: 0.9375rem;
+        line-height: 1.7;
+    }
+
+    .hero-badge-corporate {
+        font-size: 0.75rem;
+        padding: 0.625rem 1rem;
+        gap: 0.5rem;
+    }
+
+    .badge-dot {
+        width: 6px;
+        height: 6px;
     }
 
     .btn-corporate-primary {
         width: 100%;
         justify-content: center;
+        padding: 1rem 1.5rem;
     }
 
     .hero-stats {
         grid-template-columns: 1fr;
-        gap: 1.25rem;
+        gap: 1rem;
+        margin-top: 0.5rem;
+        padding-top: 1.25rem;
     }
 
-    .hero-badge-corporate {
+    .stat-item {
+        text-align: center;
+        padding: 0.75rem;
+        background: rgba(37, 99, 235, 0.05);
+        border-radius: 8px;
+    }
+
+    .stat-value {
+        font-size: 1.75rem;
+    }
+
+    .stat-label {
         font-size: 0.75rem;
-        padding: 0.625rem 1.25rem;
     }
 
     .hero-image-wrapper {
         padding: 2rem 1.5rem;
-        min-height: 350px;
+        min-height: 320px;
+    }
+
+    .hero-brand-image {
+        max-width: 90%;
+    }
+
+    .overlay-badge {
+        display: none;
     }
 }

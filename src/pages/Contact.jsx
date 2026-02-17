@@ -22,36 +22,21 @@ const Contact = () => {
         e.preventDefault()
         setIsSubmitting(true)
 
-        // Simulate form submission
+        // Format the message for WhatsApp
+        const whatsappMessage = `*New Enquiry from Website*%0A%0A*Name:* ${formData.name}%0A*Phone:* ${formData.phone}%0A*Email:* ${formData.email}%0A*Message:* ${formData.message}`
+        
+        // WhatsApp number (without + and spaces)
+        const whatsappNumber = '917350996738'
+        
+        // Open WhatsApp with pre-filled message
+        const whatsappURL = `https://wa.me/${whatsappNumber}?text=${whatsappMessage}`
+        
         setTimeout(() => {
-            alert('Thank you for your enquiry! We will get back to you soon.')
+            window.open(whatsappURL, '_blank')
             setFormData({ name: '', phone: '', email: '', message: '' })
             setIsSubmitting(false)
-        }, 1500)
+        }, 500)
     }
-
-    const contactInfo = [
-        {
-            icon: '📍',
-            title: 'Address',
-            details: ['Gat No. 138, Kasurdi K.B,', 'Khed, Shivapur,', 'Pune - 412205']
-        },
-        {
-            icon: '📞',
-            title: 'Phone',
-            details: ['+91 73509 96738', '+91 70422 60431']
-        },
-        {
-            icon: '✉️',
-            title: 'Email',
-            details: ['kllatifix26@gmail.com']
-        },
-        {
-            icon: '🌐',
-            title: 'Website',
-            details: ['www.kllatifix.com']
-        }
-    ]
 
     return (
         <div className="contact-page">
@@ -64,25 +49,6 @@ const Contact = () => {
                         <p className="contact-hero-subtitle">
                             Have questions about our products? We're here to help!
                         </p>
-                    </div>
-                </div>
-            </section>
-
-            {/* Contact Info Cards */}
-            <section className="contact-info-section section section-light">
-                <div className="container">
-                    <div className="contact-info-grid">
-                        {contactInfo.map((info, index) => (
-                            <div key={index} className="contact-info-card">
-                                <div className="contact-info-icon">{info.icon}</div>
-                                <h3 className="contact-info-title">{info.title}</h3>
-                                <div className="contact-info-details">
-                                    {info.details.map((detail, idx) => (
-                                        <p key={idx}>{detail}</p>
-                                    ))}
-                                </div>
-                            </div>
-                        ))}
                     </div>
                 </div>
             </section>
@@ -179,10 +145,16 @@ const Contact = () => {
 
             {/* Map Section */}
             <section className="map-section">
-                <div className="map-placeholder">
-                    <div className="map-icon">📍</div>
-                    <p>Gat No. 138, Kasurdi K.B, Khed, Shivapur, Pune - 412205</p>
-                </div>
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3785.0!2d73.7!3d18.5!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMTjCsDMwJzAwLjAiTiA3M8KwNDInMDAuMCJF!5e0!3m2!1sen!2sin!4v1234567890"
+                    width="100%"
+                    height="450"
+                    style={{ border: 0 }}
+                    allowFullScreen=""
+                    loading="lazy"
+                    referrerPolicy="no-referrer-when-downgrade"
+                    title="K L LATIFIX Location"
+                ></iframe>
             </section>
         </div>
     )

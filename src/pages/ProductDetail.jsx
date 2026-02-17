@@ -19,11 +19,25 @@ const ProductDetail = () => {
     }
 
     const handleDownloadBrochure = () => {
-        alert('Brochure download will be available soon!')
+        // Create a temporary link element
+        const link = document.createElement('a')
+        link.href = '/products/broucher New_ (2).pdf'
+        link.download = 'KL-LATIFIX-Brochure.pdf'
+        document.body.appendChild(link)
+        link.click()
+        document.body.removeChild(link)
     }
 
     const handleEnquiry = () => {
-        window.location.href = '/contact'
+        // Format the message for WhatsApp with product details
+        const whatsappMessage = `*Product Enquiry from Website*%0A%0A*Product:* ${product.name}%0A*Category:* ${product.category}%0A%0AI would like to know more about this product.`
+        
+        // WhatsApp number (without + and spaces)
+        const whatsappNumber = '917350996738'
+        
+        // Open WhatsApp with pre-filled message
+        const whatsappURL = `https://wa.me/${whatsappNumber}?text=${whatsappMessage}`
+        window.open(whatsappURL, '_blank')
     }
 
     return (

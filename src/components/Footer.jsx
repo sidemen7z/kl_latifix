@@ -85,9 +85,11 @@ const Footer = () => {
                                 <div className="contact-item">
                                     <div className="contact-icon">📍</div>
                                     <div className="contact-text">
-                                        <p>Gat No. 138, Kasurdi K.B,</p>
-                                        <p>Khed, Shivapur,</p>
-                                        <p>Pune - 412205</p>
+                                        <a href="https://www.google.com/maps/search/?api=1&query=Gat+No.+138,+Kasurdi+K.B,+Khed,+Shivapur,+Pune+-+412205" target="_blank" rel="noopener noreferrer">
+                                            <p>Gat No. 138, Kasurdi K.B,</p>
+                                            <p>Khed, Shivapur,</p>
+                                            <p>Pune - 412205</p>
+                                        </a>
                                     </div>
                                 </div>
                                 <div className="contact-item">
@@ -119,7 +121,7 @@ const Footer = () => {
                 <div className="container">
                     <div className="footer-bottom-content">
                         <p className="footer-copyright">
-                            © {currentYear} K L Latifix Pvt. Ltd. All rights reserved.
+                            © {currentYear} K L Latifix Pvt. Ltd. All rights reserved. | Developed by <a href="https://aise360.com" target="_blank" rel="noopener noreferrer" className="developer-link">aise360.com</a>
                         </p>
                         <div className="footer-social">
                             <a href="#" className="social-link" aria-label="Facebook">

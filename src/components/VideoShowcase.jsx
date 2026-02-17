@@ -18,7 +18,7 @@ const VideoShowcase = () => {
             title: 'Product Excellence',
             description: 'See how our tile adhesives and construction chemicals deliver superior performance on every project.',
             thumbnail: '/logo.png',
-            videoUrl: '/videos/product-video.mp4',
+            videoUrl: '/videos/Video_Generation_Based_on_Product_Description.mp4',
             category: 'Products'
         },
         {
