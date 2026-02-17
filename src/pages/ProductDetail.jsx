@@ -18,16 +18,6 @@ const ProductDetail = () => {
         )
     }
 
-    const handleDownloadBrochure = () => {
-        // Create a temporary link element
-        const link = document.createElement('a')
-        link.href = '/products/broucher New_ (2).pdf'
-        link.download = 'KL-LATIFIX-Brochure.pdf'
-        document.body.appendChild(link)
-        link.click()
-        document.body.removeChild(link)
-    }
-
     const handleEnquiry = () => {
         // Format the message for WhatsApp with product details
         const whatsappMessage = `*Product Enquiry from Website*%0A%0A*Product:* ${product.name}%0A*Category:* ${product.category}%0A%0AI would like to know more about this product.`
@@ -62,12 +52,6 @@ const ProductDetail = () => {
                                     <path d="M2.5 6.66667L10 11.6667L17.5 6.66667M3.33333 15H16.6667C17.5871 15 18.3333 14.2538 18.3333 13.3333V6.66667C18.3333 5.74619 17.5871 5 16.6667 5H3.33333C2.41286 5 1.66667 5.74619 1.66667 6.66667V13.3333C1.66667 14.2538 2.41286 15 3.33333 15Z" stroke="currentColor" strokeWidth="1.5" />
                                 </svg>
                                 <span>Send Enquiry</span>
-                            </button>
-                            <button className="btn btn-secondary btn-large" onClick={handleDownloadBrochure}>
-                                <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
-                                    <path d="M10 12.5L6.25 8.75M10 12.5L13.75 8.75M10 12.5V3.125M16.875 12.5V15.625C16.875 16.1223 16.4723 16.525 15.975 16.525H4.025C3.52766 16.525 3.125 16.1223 3.125 15.625V12.5" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
-                                </svg>
-                                <span>Download Brochure</span>
                             </button>
                         </div>
                     </div>

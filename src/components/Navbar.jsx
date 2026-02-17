@@ -60,7 +60,13 @@ const Navbar = () => {
                 <div className="container navbar-container">
                     <Link to="/" className="navbar-logo">
                         <div className="logo-content">
-                            <img src="/logo.png" alt="K L LATIFIX" className="logo-image" />
+                            <img 
+                                src="/logo.png" 
+                                alt="K L LATIFIX" 
+                                className="logo-image"
+                                loading="eager"
+                                fetchpriority="high"
+                            />
                             <div className="logo-text">
                                 <h2 className="logo-title">K L LATIFIX</h2>
                                 <p className="logo-tagline">With European Technology</p>

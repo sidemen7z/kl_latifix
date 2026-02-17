@@ -7,27 +7,11 @@ const VideoShowcase = () => {
     const videos = [
         {
             id: 1,
-            title: 'K L LATIFIX - Premium Quality',
-            description: 'Discover our range of premium construction chemical solutions engineered with European technology.',
-            thumbnail: '/logo.png',
-            videoUrl: '/videos/hero-video.mp4',
-            category: 'Brand Story'
-        },
-        {
-            id: 2,
-            title: 'Product Excellence',
-            description: 'See how our tile adhesives and construction chemicals deliver superior performance on every project.',
+            title: 'LATIFIX 525 - Premium Tile Adhesive',
+            description: 'See how our LATIFIX 525 tile adhesive delivers superior performance on every project.',
             thumbnail: '/logo.png',
             videoUrl: '/videos/Video_Generation_Based_on_Product_Description.mp4',
-            category: 'Products'
-        },
-        {
-            id: 3,
-            title: 'Innovation & Technology',
-            description: 'Experience the difference that European technology makes in construction chemical solutions.',
-            thumbnail: '/logo.png',
-            videoUrl: '/videos/showcase-video.mp4',
-            category: 'Technology'
+            category: 'Product Showcase'
         }
     ]
 

@@ -53,6 +53,8 @@ const Hero = () => {
                                 src="/products/ChatGPT Image Feb 17, 2026, 03_03_44 PM.png"
                                 alt="K L LATIFIX - Premium Construction Solutions"
                                 className="hero-brand-image"
+                                loading="eager"
+                                fetchpriority="high"
                             />
                         </div>
                     </div>
