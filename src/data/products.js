@@ -5,7 +5,7 @@ export const productsData = {
         category: 'Tiling Solutions',
         shortDesc: 'Polymer Modified Tile Adhesive',
         fullDesc: 'Premium polymer-modified tile adhesive designed for superior bonding of ceramic tiles on various substrates. Ideal for both interior and exterior applications.',
-        image: '/products/latifix-515-new.png',
+        image: '/products/WhatsApp Image 2026-02-18 at 18.30.48.jpeg',
         features: [
             'High bond strength',
             'Water resistant',
@@ -37,7 +37,7 @@ export const productsData = {
         category: 'Tiling Solutions',
         shortDesc: 'Highly Modified Tile Adhesive',
         fullDesc: 'Advanced highly modified tile adhesive with enhanced polymer content for superior performance in demanding applications.',
-        image: '/products/latifix-525-new.png',
+        image: '/products/WhatsApp Image 2026-02-18 at 18.30.49.jpeg',
         features: [
             'Superior bond strength',
             'Highly flexible',
@@ -103,7 +103,7 @@ export const productsData = {
         category: 'Tiling Solutions',
         shortDesc: 'Flexible Tile Adhesive',
         fullDesc: 'Highly flexible tile adhesive designed for substrates subject to movement and vibration. Perfect for challenging installations.',
-        image: '/products/latifix-545.png',
+        image: '/products/WhatsApp Image 2026-02-18 at 18.30.50.jpeg',
         features: [
             'Highly flexible',
             'Crack bridging properties',
@@ -136,7 +136,7 @@ export const productsData = {
         category: 'Tiling Solutions',
         shortDesc: 'Highly Flexible Adhesive for Large Format Tiles',
         fullDesc: 'Premium highly flexible adhesive specially formulated for large format tiles and heavy stone installations.',
-        image: '/products/latifix-555-new.png',
+        image: '/products/WhatsApp Image 2026-02-18 at 18.30.51.jpeg',
         features: [
             'Designed for large format tiles',
             'Maximum flexibility',
@@ -169,7 +169,7 @@ export const productsData = {
         category: 'AAC Block Solutions',
         shortDesc: 'High Strength Polymer Modified AAC Block Adhesive',
         fullDesc: 'Cost-effective alternative to traditional mortar for AAC block construction. High strength polymer modified adhesive for superior bonding.',
-        image: '/products/aac-adhesive-new.png',
+        image: '/products/WhatsApp Image 2026-02-18 at 18.30.47.jpeg',
         features: [
             'High strength bonding',
             'Polymer modified',
@@ -202,7 +202,7 @@ export const productsData = {
         category: 'Grouting Solutions',
         shortDesc: 'Premium Tile Grout with Smooth Finish',
         fullDesc: 'High-quality polymer modified tile grout offering smooth finish, high durability, and strong bonding for professional tile installations.',
-        image: '/products/tile-grout-new.png',
+        image: '/products/WhatsApp Image 2026-02-18 at 18.30.52.jpeg',
         features: [
             'Smooth finish',
             'High durability',
@@ -235,7 +235,7 @@ export const productsData = {
         category: 'Grouting Solutions',
         shortDesc: 'High Strength Chemical Resistant Epoxy Grout',
         fullDesc: 'Premium building solution with high strength and chemical resistance. Provides smooth finish and is available in multiple colors.',
-        image: '/products/epoxy-grout-new.png',
+        image: '/products/WhatsApp Image 2026-02-18 at 18.30.54.jpeg',
         features: [
             'High strength',
             'Chemical resistant',
@@ -268,7 +268,7 @@ export const productsData = {
         category: 'Plastering Solutions',
         shortDesc: 'High Workability Crack Resistant Plaster',
         fullDesc: 'Premium ready mix plaster with high workability, crack resistance, and durable performance. Requires less curing for faster project completion.',
-        image: '/products/ready-mix-plaster-new.png',
+        image: '/products/WhatsApp Image 2026-02-18 at 18.30.53.jpeg',
         features: [
             'High workability',
             'Crack resistant',
@@ -301,7 +301,7 @@ export const productsData = {
         category: 'Waterproofing Solutions',
         shortDesc: 'Premium Waterproofing Solution',
         fullDesc: 'Ideal waterproofing solution for bathrooms, kitchens, and balconies. Provides excellent protection against water seepage.',
-        image: '/products/hydrobond-wp-new.png',
+        image: '/products/WhatsApp Image 2026-02-18 at 18.30.46.jpeg',
         features: [
             'Excellent waterproofing',
             'Flexible coating',
@@ -334,7 +334,7 @@ export const productsData = {
         category: 'Waterproofing Solutions',
         shortDesc: 'Flexible Waterproof Compound',
         fullDesc: 'Flexible waterproof compound suitable for both interior and exterior applications. Provides long-lasting protection.',
-        image: '/products/flexiseal-wp.png',
+        image: '/products/WhatsApp Image 2026-02-18 at 18.30.45.jpeg',
         features: [
             'Highly flexible',
             'Interior & exterior use',
