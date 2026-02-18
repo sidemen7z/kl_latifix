@@ -10,7 +10,7 @@ const VideoShowcase = () => {
             title: 'LATIFIX 525 - Premium Tile Adhesive',
             description: 'See how our LATIFIX 525 tile adhesive delivers superior performance on every project.',
             thumbnail: '/logo.png',
-            videoUrl: '/videos/Video_Generation_Based_on_Product_Description.mp4',
+            videoUrl: '/videos/5.mp4',
             category: 'Product Showcase'
         }
     ]
